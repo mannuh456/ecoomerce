@@ -5,11 +5,11 @@ from .models import CustomUser
 
 # Register your models here.
 class CustomUserAdmin(UserAdmin):
-    add_fieldsets =(
+    add_fieldsets = (
         (None, {
             'classes':('wide',),
-            'fields':('username','email','first_name','last_name','password','confirm password','city','state','address','phone','is_staff','is_active')
-        })
+            'fields':('username','email','first_name','last_name','password1','password2','city','state','address','phone','is_staff','is_active')}
+        ),
     )
 
 admin.site.register(CustomUser,CustomUserAdmin)
